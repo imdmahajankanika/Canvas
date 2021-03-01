@@ -13,6 +13,6 @@ app.post('/get', jsonParser, function (req, res) {
     const body = req.body;
     console.log(body);
 });
-app.listen(80,function(){
+app.listen(3000,function(){
     console.log("Server is listening at default port!")
 })
