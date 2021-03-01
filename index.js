@@ -1,3 +1,4 @@
+const port = process.env.PORT||8000;
 const express = require('express');
 const app =express();
 const bodyParser= require('body-parser')
@@ -13,6 +14,6 @@ app.post('/get', jsonParser, function (req, res) {
     const body = req.body;
     console.log(body);
 });
-app.listen(8000,function(){
-    console.log("Server is listening at default port!")
+app.listen(port,function(){
+    console.log("Server is listening at default port! "+port)
 })

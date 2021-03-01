@@ -46,7 +46,7 @@ function display() {
      figs.push({"shape": shape.value, "bg_color": bg_color.value, "x": x, "y": y, "figure_size": figure_size.value, "border_thickness": border_thickness.value, "border_col": border_col.value});
       localStorage.setItem("figures", JSON.stringify(figs));
       getFigs=JSON.parse(localStorage.getItem("figures"))
-      fetch("http://localhost:8000/get",
+      fetch("/get",
       {
         method: 'POST',
         headers: {
